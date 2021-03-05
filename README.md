@@ -1,5 +1,5 @@
 # keras-gradcam
-Keras implementation of GradCAM. Comparing to its original implementation: https://github.com/eclique/keras-gradcam, the major fix is to support Tensorflow 2.0 and above. 
+Keras implementation of GradCAM. Comparing to its original implementation: https://github.com/eclique/keras-gradcam, the major fix is to support Tensorflow 2.0 and above by using custom gradient. 
 
 To run script: `python grad_cam.py </path/to/img>`.
 
