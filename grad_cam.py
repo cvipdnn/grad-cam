@@ -107,7 +107,7 @@ def guided_backprop(gb_model, images):
 
     gb = tape.gradient(outputs,inputs)
     gb = np.array(gb)
-
+    
 
     return gb
 
@@ -131,7 +131,7 @@ def grad_cam(input_model, image, cls, layer_name):
     with tf.GradientTape() as tape:
         images_tensor = tf.cast(image, tf.float32)
         last_conv_layer_output = last_conv_layer_model(images_tensor)
-        tape.watch(last_conv_layer_output)
+        
         preds = classifier_model(last_conv_layer_output)
         y_c = preds[:, cls]
         tape.watch(last_conv_layer_output)
